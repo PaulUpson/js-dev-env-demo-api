@@ -15,7 +15,21 @@ app.get('/users', function(req, res) {
   res.json([
     {"id": 1,"firstName":"Bob","lastName":"Smith","email":"bob@gmail.com"},
     {"id": 2,"firstName":"Tammy","lastName":"Norton","email":"tnorton@yahoo.com"},
-    {"id": 3,"firstName":"Tina","lastName":"Lee","email":"lee.tina@hotmail.com"}
+    {"id": 3,"firstName":"Tina","lastName":"Lee","email":"lee.tina@hotmail.com"}    
+  ]);
+});
+
+app.get('/acl', function(req, res) {
+  // Hard coding for simplicity. Pretend this hits a real database
+  res.json([
+    {"id": 1,"name": "Bob Smith","type": "user"},
+    {"id": 2,"name": "Tammy Norton","type": "user"},
+    {"id": 3,"name": "Tina Lee","type": "user"},
+    {"id": 4,"name": "Tony Moore","type": "user"},
+    {"id": 5,"name": "Paul Upson","type": "user"},
+    {"id": 6,"name": "Investigators","type": "group"},
+    {"id": 7,"name": "Homicide","type": "group"},
+    {"id": 8,"name": "Robbery","type": "group"},
   ]);
 });
 
